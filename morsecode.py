@@ -98,7 +98,7 @@ def is_validated_english_sentence(user_input):
             return False
 
     # 특수문자 체크
-    symbols = "_@#$%^&*()-+=\[\]\{\}\"\'\;\:\\\|\`\~"
+    symbols = "\_\@\#\$\%\^\&\*\(\)\-\+\=\[\]\{\}\"\'\;\:\\\|\`\~"
     for symbol in symbols:
         if symbol in user_input:
             return False
