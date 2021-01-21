@@ -331,8 +331,8 @@ def main():
                 print(decoding_sentence(msg))
 
             if is_validated_english_sentence(msg):
-                msg = get_cleaned_english_sentence(msg)
-                print(encoding_sentence(msg))
+                trimmed_msg = get_cleaned_english_sentence(msg)
+                print(encoding_sentence(trimmed_msg))
 
     # ==================================
     print("Good Bye")
