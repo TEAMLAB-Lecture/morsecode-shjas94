@@ -102,7 +102,7 @@ def is_validated_english_sentence(user_input):
     symbols = string.punctuation
     punctuations = [".", ",", "!", "?"]
     for punc in punctuations:
-        symbols = symbols.replace(punc)
+        symbols = symbols.replace(punc, "")
     for symbol in symbols:
         if symbol in user_input:
             return False
