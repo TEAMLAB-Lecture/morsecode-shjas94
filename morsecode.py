@@ -1,5 +1,6 @@
 # -*- coding: utf8 -*-
 import re
+import string
 # Help Function - 수정하지 말 것
 
 
@@ -98,7 +99,10 @@ def is_validated_english_sentence(user_input):
             return False
 
     # 특수문자 체크
-    symbols = "\_\@\#\$\%\^\&\*\(\)\-\+\=\[\]\{\}\"\'\;\:\\\|\`\~"
+    symbols = string.punctuation
+    punctuations = [".", ",", "!", "?"]
+    for punc in punctuations:
+        symbols = symbols.replace(punc)
     for symbol in symbols:
         if symbol in user_input:
             return False
