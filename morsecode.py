@@ -87,7 +87,7 @@ def is_validated_english_sentence(user_input):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
     # 빈 문장일 경우 바로 False 반환
-    if user_input == "":
+    if user_input.replace(" ", "") == "":
         return False
 
     result = True
@@ -302,12 +302,12 @@ def encoding_sentence(english_sentence):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
     result = ""
-    for word in english_sentence:
-        if word == " ":
+    english_sentence_splitted = english_sentence.split()
+    for word in english_sentence_splitted:
+        for char in word:
+            result += encoding_character(char)
             result += " "
-        else:
-            result += encoding_character(word)
-            result += " "
+        result += " "
     return result.rstrip()
 
     # ==================================
