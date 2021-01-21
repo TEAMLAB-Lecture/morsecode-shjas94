@@ -303,7 +303,7 @@ def encoding_sentence(english_sentence):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당 또는 필요에 따라 자유로운 수정
     result = ""
-    english_sentence = english_sentence.replace(".")
+    english_sentence = english_sentence.replace(".", "")
     english_sentence_splitted = english_sentence.split()
     for word in english_sentence_splitted:
         for chr in word:
