@@ -331,10 +331,10 @@ def main():
             continue
         else:
             # 모스코드인 경우
-            if is_validated_morse_code(msg) and not is_validated_english_sentence():
+            if is_validated_morse_code(msg) and not is_validated_english_sentence(msg):
                 print(decoding_sentence(msg))
 
-            if is_validated_english_sentence(msg) and not is_validated_morse_code():
+            if is_validated_english_sentence(msg) and not is_validated_morse_code(msg):
                 trimmed_msg = get_cleaned_english_sentence(msg)
                 print(encoding_sentence(trimmed_msg))
 
